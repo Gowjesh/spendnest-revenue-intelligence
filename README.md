@@ -2,6 +2,9 @@
 
 A modern Next.js revenue intelligence workspace designed for sales managers to review calls and meetings, monitor team activity on **21 August 2026 (Asia/Kolkata)**, surface operational exceptions, route conversations with evidence citations, and verify data contracts.
 
+- **GitHub Repository**: [https://github.com/Gowjesh/spendnest-revenue-intelligence](https://github.com/Gowjesh/spendnest-revenue-intelligence)
+- **1-Click Deployed Access (Vercel)**: [Deploy on Vercel](https://vercel.com/new/clone?repository-url=https://github.com/Gowjesh/spendnest-revenue-intelligence)
+
 ---
 
 ## 1. Quickstart & Local Setup
