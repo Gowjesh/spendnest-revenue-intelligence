@@ -1,4 +1,4 @@
-# SpendNest Revenue Intelligence Inbox
+# Revenue Intelligence Inbox
 
 A modern Next.js revenue intelligence workspace designed for sales managers to review calls and meetings, monitor team activity on **21 August 2026 (Asia/Kolkata)**, surface operational exceptions, route conversations with evidence citations, and verify data contracts.
 
@@ -109,7 +109,7 @@ exports/
    - *Evidence*: Call C06 (`12216d5c-e254-52c6-b344-47de4c6e1ae5`) lists `rep_name: "Meera"`, but the caller begins: *"Good evening, Mr Nikhil... Ravi here. I'll say at the start that this is a cold call."*
    - *Product Impact*: The interface displays both the provisioned account and detected speaker name, flagging an identity discrepancy for management phone audit.
 3. **Finding 3: Meeting Records Conceal Supplier and Internal Sessions**:
-   - *Evidence*: Meeting M02 (`4c58cf32-bc96-52fb-b9d9-bb5e8e3f019b`) "LedgerBridge" is an inbound supplier evaluation where SpendNest is the buyer (*Turn 2: "Supplier A: Are you more interested in electronic invoicing or payment rails?" Turn 3: "Electronic invoicing is the bigger opportunity"*). Meeting M10 is internal training (*Turn 2: "wait for the trainer", Turn 4: "demo account"*). Meeting M07 is a bug reproduction session (*Turns 2–8*).
+   - *Evidence*: Meeting M02 (`4c58cf32-bc96-52fb-b9d9-bb5e8e3f019b`) "LedgerBridge" is an inbound supplier evaluation where our team is the buyer (*Turn 2: "Supplier A: Are you more interested in electronic invoicing or payment rails?" Turn 3: "Electronic invoicing is the bigger opportunity"*). Meeting M10 is internal training (*Turn 2: "wait for the trainer", Turn 4: "demo account"*). Meeting M07 is a bug reproduction session (*Turns 2–8*).
    - *Product Impact*: Routing taxonomy strictly separates sales pipeline opportunities from vendor evaluations, customer bug escalations, and internal training.
 
 ---
@@ -117,7 +117,7 @@ exports/
 ## 6. One Deliberately Rejected Decision
 
 - **Rejected Alternative**: Automated fuzzy account linking (e.g., merging Cedarwave M04 with M13) and synthetic pipeline ARR forecasting based on transcript spending figures (e.g., Asterloom M03 mention of *"INR 10-15 lakh monthly spend"*).
-- **Why Rejected**: Per `DATA_CONTRACT.md` and `DATA_DICTIONARY.md`, there is no authoritative CRM deal table, no verified company-ID join, and conversational figures represent employee personal reimbursement volume, not SpendNest software ARR.
+- **Why Rejected**: Per data contracts, there is no authoritative CRM deal table, no verified company-ID join, and conversational figures represent employee personal reimbursement volume, not software contract ARR.
 - **Trade-off Accepted**: We present grounded conversation signals and explicit uncertainty boundaries rather than inventing artificial pipeline numbers that generate false managerial confidence.
 
 ---

@@ -1,4 +1,4 @@
-# SpendNest Revenue Intelligence Inbox — 5 Slide Presentation
+# Revenue Intelligence Inbox — 5 Slide Presentation
 
 ---
 
@@ -10,7 +10,7 @@ A sales manager receives 44 unstructured calls and calendar records across multi
 ### Finding 1: Stored Classification Contradiction
 - **Evidence**:
   - **Call C02** (`4b870624-8aad-5315-a60e-0db95981cf99`): Stored as `is_connected: true` and `is_conversation: true`, but Arun spoke only to receptionist Kavya who transferred him to Leela's voicemail (*"It looks as though she isn't in the office today... I'll put you through to the mailbox now"*).
-  - **Call C04** (`bcdcbf56-d338-5c78-9a97-42c2fc1c9931`): Stored as `is_connected: false` and `is_conversation: false`, yet Arun left a 40-second substantive voicemail clarifying a previously misdirected proposal (*"Arun from SpendNest here... My understanding is that our information first went to the wrong email address"*).
+  - **Call C04** (`bcdcbf56-d338-5c78-9a97-42c2fc1c9931`): Stored as `is_connected: false` and `is_conversation: false`, yet Arun left a 40-second substantive voicemail clarifying a previously misdirected proposal (*"Arun from the sales team here... My understanding is that our information first went to the wrong email address"*).
 - **Product Impact**: The dashboard explicitly separates upstream connection rates from verified conversation coverage.
 
 ### Finding 2: Caller Identity Divergence
@@ -20,7 +20,7 @@ A sales manager receives 44 unstructured calls and calendar records across multi
 
 ### Finding 3: Non-Sales Interactions Mixed with Pipeline
 - **Evidence**:
-  - **Meeting M02**: SpendNest is evaluating LedgerBridge as an e-invoicing supplier (*Turn 2: "Supplier A... Are you more interested in electronic invoicing or payment rails?" Turn 3: "Electronic invoicing is the bigger opportunity"*).
+  - **Meeting M02**: Internal strategy team is evaluating LedgerBridge as an e-invoicing supplier (*Turn 2: "Supplier A... Are you more interested in electronic invoicing or payment rails?" Turn 3: "Electronic invoicing is the bigger opportunity"*).
   - **Meeting M10**: Internal employee billing walkthrough (*Turn 2: "We can wait for the trainer to return" Turn 4: "demo account"*).
   - **Meeting M07**: Customer bug reproduction session (*Turns 2–8*).
 - **Product Impact**: Strict separation of pipeline opportunities from vendor evaluations, customer bug reports, and internal enablement.
@@ -38,7 +38,7 @@ A sales manager receives 44 unstructured calls and calendar records across multi
 
 ### Deliberately Rejected Decision: Speculative Account Merging & Deal Size ARR
 - **Alternative Considered**: Automatically clustering records by fuzzy company name matching (e.g. Cedarwave M04 with M13) and guessing deal ARR from loose conversational statements (e.g. Asterloom M03 mention of *"INR 10-15 lakh monthly spend"*).
-- **Why Rejected**: Per `DATA_CONTRACT.md` and `DATA_DICTIONARY.md`, there is no authoritative CRM deal table, no verified company-ID join, and conversational mentions represent employee personal spending, not SpendNest software contract value.
+- **Why Rejected**: Per data contracts, there is no authoritative CRM deal table, no verified company-ID join, and conversational mentions represent employee personal spending, not software contract value.
 - **Trade-off Accepted**: We present transparent conversation signals and explicit uncertainty boundaries rather than inventing artificial pipeline figures that generate false managerial confidence.
 
 ---
@@ -57,9 +57,9 @@ A sales manager receives 44 unstructured calls and calendar records across multi
 9. **Review Needed / Attention Required**: Newly arrived or stale analysis
 
 ### Difficult Routing Case 1: M02 LedgerBridge (Buyer vs Seller)
-- **The Ambiguity**: Calendar title is *"LedgerBridge / SpendNest discussion"*. An automated rule might easily classify this as an outbound sales pitch.
+- **The Ambiguity**: Calendar title is *"LedgerBridge Discussion"*. An automated rule might easily classify this as an outbound sales pitch.
 - **Transcript Evidence**: Turn 2: *"Supplier A: Then I will cover the market strategy as well as technical integration... Are you more interested in electronic invoicing or payment rails?"* Turn 3: *"Team member B: Electronic invoicing is the bigger opportunity."*
-- **Resolution**: SpendNest is the buyer evaluating a vendor. Routed to *Vendor / Inbound Evaluation* to prevent corrupting sales pipeline metrics.
+- **Resolution**: Internal team is the buyer evaluating a vendor. Routed to *Vendor / Inbound Evaluation* to prevent corrupting sales pipeline metrics.
 
 ### Difficult Routing Case 2: M01 Harborpath (Dual Destination)
 - Harborpath advises overseas firms establishing US entities (channel referral partner), but also agrees to record a joint podcast (Turn 26 co-marketing). Routed to Channel Partnerships with a co-marketing marketing action item.

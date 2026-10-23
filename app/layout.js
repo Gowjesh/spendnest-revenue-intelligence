@@ -2,7 +2,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Revenue Intelligence Inbox | SpendNest',
+  title: 'Revenue Intelligence Inbox',
   description: 'Managerial revenue intelligence inbox for sales calls, meetings, evidence-backed routing, and activity analysis.',
 };
 

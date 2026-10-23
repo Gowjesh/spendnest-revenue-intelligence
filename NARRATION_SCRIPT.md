@@ -11,7 +11,7 @@
 **On Screen**: Open `http://localhost:3000` showing the Dashboard overview.
 
 **Spoken Narration**:
-> *"Hello! Today I'm demonstrating the Revenue Intelligence Inbox built for SpendNest sales managers to understand daily activity, prioritize critical accounts, and inspect conversation evidence for August 21st, 2026.*
+> *"Hello! Today I'm demonstrating the Revenue Intelligence Inbox built for sales managers to understand daily activity, prioritize critical accounts, and inspect conversation evidence for August 21st, 2026.
 >
 > *Starting on the dashboard, we see 44 total selected records: 30 phone calls and 14 calendar meetings. Notice our headline metrics clearly define their denominators: our usable transcript coverage is 40.9%—that's 18 out of 44 records with genuine text.
 >
@@ -28,7 +28,7 @@
 **Spoken Narration**:
 > *"Now let's switch to the Inbox view, which lists all 44 interactions with multi-dimensional filters by rep, organizer, source type, and routing category.
 >
-> *Here is one of our most difficult routing decisions: Meeting M02, titled 'LedgerBridge / SpendNest discussion'. On the surface, a sales manager or automated tool might see a company name and assume this is a sales deal in our pipeline. But when we open M02 and read turns 2 and 3, we discover something crucial: SpendNest is the buyer, evaluating LedgerBridge as a third-party electronic invoicing supplier!
+> *Here is one of our most difficult routing decisions: Meeting M02, titled 'LedgerBridge Discussion'. On the surface, a sales manager or automated tool might see a company name and assume this is a sales deal in our pipeline. But when we open M02 and read turns 2 and 3, we discover something crucial: our team is the buyer, evaluating LedgerBridge as a third-party electronic invoicing supplier!
 >
 > *If we had lazily routed M02 into our sales pipeline, we would inflate pipeline value and mislead executive forecasting. So our routing engine classifies M02 under 'Vendor / Inbound Evaluation'.
 >
