@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendNest Revenue Intelligence Inbox — 5 Slide Presentation</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #131b2e;
+      --accent: #6366f1;
+      --accent-emerald: #10b981;
+      --accent-rose: #f43f5e;
+      --accent-amber: #f59e0b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+    .slide-deck {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .slide {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      position: relative;
+      page-break-after: always;
+      min-height: 560px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .slide-header {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .slide-number {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .slide-title {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin-top: 4px;
+    }
+    .slide-subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .slide-body {
+      flex: 1;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    .card h4 {
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card p, .card ul {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .card ul {
+      padding-left: 18px;
+    }
+    .highlight-box {
+      background: rgba(99, 102, 241, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin-top: 14px;
+      font-size: 13px;
+    }
+    .quote {
+      font-style: italic;
+      color: #e2e8f0;
+    }
+    .slide-footer {
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      margin-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-rose { background: rgba(244, 63, 94, 0.15); color: #fb7185; }
+    .badge-emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+    .badge-indigo { background: rgba(99, 102, 241, 0.15); color: #818cf8; }
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+      z-index: 1000;
+    }
+    @media print {
+      body { background: #fff; color: #000; padding: 0; }
+      .print-btn { display: none; }
+      .slide { background: #fff; color: #111; border: 1px solid #ddd; box-shadow: none; margin-bottom: 20px; }
+      .slide-header, .slide-footer { border-color: #eee; }
+      .slide-title { color: #111; }
+      .card { background: #f8fafc; border-color: #e2e8f0; }
+      .card h4 { color: #111; }
+      .card p, .card ul { color: #475569; }
+      .highlight-box { background: #f1f5f9; color: #1e293b; border-color: #6366f1; }
+      .quote { color: #0f172a; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">Print / Export PDF</button>
+
+  <div class="slide-deck">
+
+    <!-- SLIDE 1 -->
+    <div class="slide">
+      <div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-number">Slide 1 of 5</div>
+            <h2 class="slide-title">Manager Problem &amp; Key Analytical Findings</h2>
+          </div>
+          <div class="slide-subtitle">SpendNest Revenue Intelligence • 21 August 2026</div>
+        </div>
+
+        <div class="slide-body">
+          <p style="font-size: 14px; margin-bottom: 20px; color: #cbd5e1;">
+            <strong>The Core Problem:</strong> A sales manager receives 44 unstructured calls and calendar records across multiple systems. Upstream metadata is unreliable, transcripts arrive asynchronously, and stored classifications often disagree with reality.
+          </p>
+
+          <div class="grid-3">
+            <div class="card">
+              <h4><span class="badge badge-rose">Finding 1</span> Classification Contradiction</h4>
+              <p>Stored connection metadata conflicts with spoken reality:</p>
+              <div class="highlight-box">
+                <span class="quote">Call C02:</span> Stored as connected &amp; conversation, but Arun spoke only to receptionist Kavya who transferred to voicemail.<br><br>
+                <span class="quote">Call C04:</span> Stored as not connected, yet Arun left a 40s substantive voicemail clarifying misrouted emails.
+              </div>
+              <p style="margin-top: 8px;"><strong>Impact:</strong> Dashboard separates upstream connect rates from verified conversation coverage.</p>
+            </div>
+
+            <div class="card">
+              <h4><span class="badge badge-rose">Finding 2</span> Caller Identity Divergence</h4>
+              <p>Upstream CRM user accounts conflict with spoken caller identification:</p>
+              <div class="highlight-box">
+                <span class="quote">Call C06:</span> Metadata rep_name is "Meera", but caller introduces himself as:<br>
+                <em>"Good evening, Mr Nikhil... Ravi here. I'll say at the start that this is a cold call."</em>
+              </div>
+              <p style="margin-top: 8px;"><strong>Impact:</strong> Displays detected speaker vs provisioned account, triggering a phone system audit flag.</p>
+            </div>
+
+            <div class="card">
+              <h4><span class="badge badge-rose">Finding 3</span> Non-Sales Interactions</h4>
+              <p>Meeting titles and calendar records conceal supplier and internal sessions:</p>
+              <div class="highlight-box">
+                <span class="quote">Meeting M02:</span> SpendNest evaluates LedgerBridge as an e-invoicing supplier (Turn 2, 3).<br><br>
+                <span class="quote">Meeting M10:</span> Internal staff billing walkthrough (Turn 2, 4).<br><br>
+                <span class="quote">Meeting M07:</span> Customer bug reproduction (Turns 2-8).
+              </div>
+              <p style="margin-top: 8px;"><strong>Impact:</strong> Strict separation of pipeline deals from vendor evaluations and internal enablement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SpendNest Revenue Intelligence Workspace</span>
+        <span>Evidence-Backed Findings • All 44 Records Audited</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide">
+      <div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-number">Slide 2 of 5</div>
+            <h2 class="slide-title">Interface Choices &amp; Deliberate Omissions</h2>
+          </div>
+          <div class="slide-subtitle">Design Architecture &amp; Honest Ground Truth</div>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2">
+            <div>
+              <div class="card" style="margin-bottom: 20px;">
+                <h4><span class="badge badge-emerald">Included</span> Purpose-Built Manager UX</h4>
+                <ul>
+                  <li><strong>KPIs with Defined Denominators:</strong> Explicit breakdown (17/44 -> 18/44 text coverage; 11/30 stored connects vs 9 verified conversations).</li>
+                  <li><strong>Priority Exception Queue:</strong> Instant visibility into customer retention risks ([M04] Cedarwave) and defect escalations ([M07] Willowfield).</li>
+                  <li><strong>Activity by Person:</strong> Distinguishes call representatives from calendar meeting organizers (organizers are not assumed to be reps).</li>
+                  <li><strong>Drilldown Detail Drawer:</strong> Evidence quotes, limitations, action items, verbatim turns, and raw source JSON in one click.</li>
+                </ul>
+              </div>
+
+              <div class="card">
+                <h4><span class="badge badge-indigo">Included</span> Replay Studio</h4>
+                <p>One-click verification panel allowing any reviewer to validate idempotency, duplicate prevention, and override persistence in seconds.</p>
+              </div>
+            </div>
+
+            <div>
+              <div class="card" style="border-left: 4px solid var(--accent-rose);">
+                <h4><span class="badge badge-rose">Rejected Decision</span> Speculative Account Linking &amp; Deal Size ARR</h4>
+                <p style="margin-bottom: 10px;">
+                  <strong>Alternative Considered:</strong> Automatically cluster records by company name matching (e.g. Cedarwave M04 with M13) and guess contract ARR from loose conversational statements (e.g. Asterloom M03 mention of "INR 10-15 lakh monthly spend").
+                </p>
+                <p style="margin-bottom: 10px;">
+                  <strong>Why Rejected:</strong> Per DATA_CONTRACT.md and DATA_DICTIONARY.md, there is no authoritative CRM deal table or verified company-ID join. Conversational mentions represent employee personal spending, not software subscription ARR.
+                </p>
+                <div class="highlight-box">
+                  <strong>Trade-off Accepted:</strong> We present transparent conversation signals and explicit uncertainty boundaries rather than inventing artificial pipeline figures that generate false managerial confidence.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SpendNest Revenue Intelligence Workspace</span>
+        <span>Decision Governance &amp; UI Rationalization</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide">
+      <div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-number">Slide 3 of 5</div>
+            <h2 class="slide-title">Routing Architecture &amp; Difficult Cases</h2>
+          </div>
+          <div class="slide-subtitle">Multi-Destination Taxonomy &amp; Nuanced Human Judgments</div>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <h4><span class="badge badge-indigo">Architecture</span> 9 Operational Destinations</h4>
+              <ul style="line-height: 1.8;">
+                <li><strong>Pipeline Deals &amp; Next Steps:</strong> M03 (Asterloom), M06 (Mapletrail), C08 (Raghav), C03 (Milan)</li>
+                <li><strong>Channel &amp; Strategic Partnerships:</strong> M01 (Harborpath), C07 (Willowbank)</li>
+                <li><strong>Customer Success &amp; Migration:</strong> M04 (Cedarwave Migration), M09 (Brookmint Setup)</li>
+                <li><strong>Customer Support &amp; Defect Escalation:</strong> M07 (Willowfield Bug Reproduction)</li>
+                <li><strong>Vendor / Inbound Evaluation:</strong> M02 (LedgerBridge E-Invoicing Supplier)</li>
+                <li><strong>Internal Enablement:</strong> M10 (Billing Training)</li>
+                <li><strong>Outbound Prospecting:</strong> C01, C05, C06, C09, C10</li>
+                <li><strong>Gatekeeper / Voicemail:</strong> C02, C04</li>
+                <li><strong>Review Needed:</strong> Stale analysis or newly arrived text</li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="card" style="margin-bottom: 16px;">
+                <h4><span class="badge badge-amber">Difficult Case 1</span> M02 LedgerBridge (Buyer vs Seller)</h4>
+                <p>
+                  <strong>The Ambiguity:</strong> Meeting title is <em>"LedgerBridge / SpendNest discussion"</em>. An automated rule might easily classify this as an outbound sales pitch.
+                </p>
+                <div class="highlight-box">
+                  <strong>Transcript Truth:</strong> Turn 2: <em>"Supplier A: Then I will cover the market strategy as well as technical integration... Are you more interested in electronic invoicing or payment rails?"</em> Turn 3: <em>"Team member B: Electronic invoicing is the bigger opportunity."</em><br>
+                  <strong>Verdict:</strong> SpendNest is the buyer evaluating a vendor. Excluded from sales pipeline.
+                </div>
+              </div>
+
+              <div class="card">
+                <h4><span class="badge badge-amber">Difficult Case 2</span> M01 Harborpath (Dual-Destination)</h4>
+                <p>
+                  Harborpath advises overseas firms establishing US entities (channel referral partner), but also agrees to record a joint podcast (Turn 26 co-marketing). Routed to Channel Partnerships with a co-marketing marketing action item.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SpendNest Revenue Intelligence Workspace</span>
+        <span>Taxonomy &amp; Edge Case Handling</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide">
+      <div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-number">Slide 4 of 5</div>
+            <h2 class="slide-title">Safe Number Checks &amp; Evidence Auditing</h2>
+          </div>
+          <div class="slide-subtitle">Data Integrity, Replay Contracts &amp; Verification Mechanics</div>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-2">
+            <div class="card">
+              <h4><span class="badge badge-emerald">Audited Numbers</span> Defined Denominators</h4>
+              <ul style="line-height: 1.8;">
+                <li><strong>Selected Record Count:</strong> Exactly 44 distinct logical records across all test batches. Primary identity: <code>(source_type, source_id)</code>.</li>
+                <li><strong>Transcript Coverage:</strong>
+                  <ul>
+                    <li>Initial Delivery: 17/44 (38.6%) — 10 calls, 7 meetings.</li>
+                    <li>Post-Update Delivery: 18/44 (40.9%) — 10 calls, 8 meetings (M07 updated).</li>
+                  </ul>
+                </li>
+                <li><strong>Connect Rate Truth:</strong> Stored metadata reports 11/30 (36.7%), but only 9 calls represent substantive two-way conversations. C02 was an administrative receptionist transfer.</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4><span class="badge badge-indigo">Replay Contract</span> Verification Results</h4>
+              <div class="highlight-box" style="margin-top: 0; margin-bottom: 14px;">
+                <strong>Idempotent Re-Import:</strong> Re-importing 01_initial.json with randomized record order preserves the exact 44 record count.
+              </div>
+              <div class="highlight-box" style="margin-top: 0; margin-bottom: 14px;">
+                <strong>Update Ingestion:</strong> Ingesting 02_update.json detects revision 2 for M07. Upgrades turns from 0 to 27 without creating a 45th record.
+              </div>
+              <div class="highlight-box" style="margin-top: 0;">
+                <strong>Preserved Judgment:</strong> Manual route overrides on M07 or any record remain 100% active and survive source updates and browser refreshes.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SpendNest Revenue Intelligence Workspace</span>
+        <span>Replay Proof &amp; Metric Verification</span>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide">
+      <div>
+        <div class="slide-header">
+          <div>
+            <div class="slide-number">Slide 5 of 5</div>
+            <h2 class="slide-title">Trade-offs, AI Usage &amp; Product Roadmap</h2>
+          </div>
+          <div class="slide-subtitle">Architectural Decisions &amp; Future Evolutions</div>
+        </div>
+
+        <div class="slide-body">
+          <div class="grid-3">
+            <div class="card">
+              <h4><span class="badge badge-indigo">Architecture</span> Deterministic State Engine</h4>
+              <p>
+                <strong>Choice:</strong> Next.js client-state engine backed by browser LocalStorage rather than requiring an external SQL database or authentication server.
+              </p>
+              <p style="margin-top: 8px;">
+                <strong>Benefit:</strong> Instant zero-latency replay testing, fully reproducible locally and online without backend dependencies or API keys.
+              </p>
+            </div>
+
+            <div class="card">
+              <h4><span class="badge badge-amber">AI Usage</span> Grounded Intelligence</h4>
+              <p>
+                <strong>Choice:</strong> Pre-generated, verifiable evidence passages and coaching insights grounded directly in the 18 adapted texts.
+              </p>
+              <p style="margin-top: 8px;">
+                <strong>Safety:</strong> Zero hallucination of contract terms, deal stages, or customer commitments. When text is absent, records remain in clean intake state.
+              </p>
+            </div>
+
+            <div class="card">
+              <h4><span class="badge badge-emerald">Roadmap</span> Future Capabilities</h4>
+              <ul>
+                <li><strong>Live CRM Sync:</strong> Two-way webhooks to push verified manual routes and coaching notes to Salesforce / HubSpot.</li>
+                <li><strong>Speaker Voice Biometrics:</strong> Automatically resolve identity discrepancies like C06 (Ravi vs Meera) in real time.</li>
+                <li><strong>Export Automations:</strong> Automatic sync of Markdown folders to shared Notion / Google Drive directories.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top: 20px;">
+            <h4>Submission Summary</h4>
+            <p style="font-size: 13px;">
+              • <strong>Working App:</strong> Live Next.js application with interactive Replay Studio and Export Center.<br>
+              • <strong>Exports:</strong> 44 structured Markdown files, <code>manifest.json</code>, <code>manifest.csv</code>, and Daily Manager Brief.<br>
+              • <strong>Recording &amp; Docs:</strong> 3-minute continuous screen demonstration video + complete narration script + short README.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>SpendNest Revenue Intelligence Workspace</span>
+        <span>Final Summary &amp; Future Outlook</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
